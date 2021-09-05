@@ -18,7 +18,6 @@ protocol ArticleCellView {
 
 protocol ArticlePresenter {
     func viewDidLoad()
-    func configure(cell: ArticleCellView, forRow row: Int)
 }
 
 class ArticlePresenterImplementation: ArticlePresenter {
@@ -38,9 +37,4 @@ class ArticlePresenterImplementation: ArticlePresenter {
     func viewDidLoad() {
         
     }
-    
-    func configure(cell: ArticleCellView, forRow row: Int) {
-       
-    }
-
 }

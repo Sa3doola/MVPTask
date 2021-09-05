@@ -8,7 +8,7 @@
 import UIKit
 import SDWebImage
 
-class HomeTableViewCell: UITableViewCell {
+class HomeTableViewCell: UITableViewCell, HomeCellView {
     
     static let id = String(describing: HomeTableViewCell.self)
     
@@ -74,7 +74,7 @@ class HomeTableViewCell: UITableViewCell {
         contentView.addSubview(titleLabel)
     }
     
-    func configureCell(model: Article) {
+    func cellConfigure(model: Article) {
         authorNameLabel.text = model.author
         titleLabel.text = model.title
         authorImage.sd_setImage(with: model.urlToImage, completed: nil)

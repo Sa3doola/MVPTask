@@ -11,19 +11,19 @@ protocol HomeView: AnyObject {
     func reloadData()
 }
 
-
-//protocol CellConfiguration {
-//    func displayModel(model: Article)
-//}
+protocol HomeCellView {
+    func cellConfigure(model: Article)
+}
 
 protocol HomePresenter {
     func viewDidLoad()
-    func goTo(article: Article)
-    var aritcle: [Article]? { get set}
+    func cellCount() -> Int
+    func configure(cell: HomeCellView, forRow row: Int)
+    func didSelectArticle(at row: Int)
 }
 
 class HomePresenterImplementation: HomePresenter {
-   
+    
     fileprivate weak var view: HomeView?
     internal let router: HomeRouter
     internal let interactor : HomeInteractor
@@ -56,7 +56,17 @@ class HomePresenterImplementation: HomePresenter {
         }
     }
     
-    func goTo(article: Article) {
+    func configure(cell: HomeCellView, forRow row: Int) {
+        guard let data = aritcle?[row] else { return }
+        cell.cellConfigure(model: data)
+    }
+    
+    func cellCount() -> Int {
+        return aritcle?.count ?? 0
+    }
+    
+    func didSelectArticle(at row: Int) {
+        guard let article = aritcle?[row] else { return }
         router.goTo(article: article)
     }
 }

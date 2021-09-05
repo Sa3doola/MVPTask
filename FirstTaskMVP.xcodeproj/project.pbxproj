@@ -27,6 +27,11 @@
 		D99F4B6C26E0C5EB00885116 /* ArticleConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D99F4B6726E0C5EB00885116 /* ArticleConfigurator.swift */; };
 		D99F4B7226E0C76700885116 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D99F4B7126E0C76700885116 /* APIManager.swift */; };
 		D99F4B7726E0C8BD00885116 /* ArticleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D99F4B7626E0C8BD00885116 /* ArticleModel.swift */; };
+		D9AD014326E4316C001C339A /* mohhaPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9AD013E26E4316C001C339A /* mohhaPresenter.swift */; };
+		D9AD014426E4316C001C339A /* mohhaRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9AD013F26E4316C001C339A /* mohhaRouter.swift */; };
+		D9AD014526E4316C001C339A /* mohhaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9AD014026E4316C001C339A /* mohhaViewController.swift */; };
+		D9AD014626E4316C001C339A /* mohhaInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9AD014126E4316C001C339A /* mohhaInteractor.swift */; };
+		D9AD014726E4316C001C339A /* mohhaConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9AD014226E4316C001C339A /* mohhaConfigurator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +58,11 @@
 		D99F4B6726E0C5EB00885116 /* ArticleConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleConfigurator.swift; sourceTree = "<group>"; };
 		D99F4B7126E0C76700885116 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		D99F4B7626E0C8BD00885116 /* ArticleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleModel.swift; sourceTree = "<group>"; };
+		D9AD013E26E4316C001C339A /* mohhaPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mohhaPresenter.swift; sourceTree = "<group>"; };
+		D9AD013F26E4316C001C339A /* mohhaRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mohhaRouter.swift; sourceTree = "<group>"; };
+		D9AD014026E4316C001C339A /* mohhaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mohhaViewController.swift; sourceTree = "<group>"; };
+		D9AD014126E4316C001C339A /* mohhaInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mohhaInteractor.swift; sourceTree = "<group>"; };
+		D9AD014226E4316C001C339A /* mohhaConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mohhaConfigurator.swift; sourceTree = "<group>"; };
 		F65F71F9BD65C0075ADF40A6 /* Pods-FirstTaskMVP.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirstTaskMVP.debug.xcconfig"; path = "Target Support Files/Pods-FirstTaskMVP/Pods-FirstTaskMVP.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -132,6 +142,11 @@
 			children = (
 				D99F4B6026E0C5C700885116 /* Home */,
 				D99F4B6226E0C5CD00885116 /* Article */,
+				D9AD013E26E4316C001C339A /* mohhaPresenter.swift */,
+				D9AD013F26E4316C001C339A /* mohhaRouter.swift */,
+				D9AD014026E4316C001C339A /* mohhaViewController.swift */,
+				D9AD014126E4316C001C339A /* mohhaInteractor.swift */,
+				D9AD014226E4316C001C339A /* mohhaConfigurator.swift */,
 			);
 			path = Secnes;
 			sourceTree = "<group>";
@@ -310,11 +325,16 @@
 				D99F4B5A26E0C5BF00885116 /* HomePresenter.swift in Sources */,
 				D99F4B5D26E0C5BF00885116 /* HomeInteractor.swift in Sources */,
 				D99F4B4526E0BF0600885116 /* HomeTableViewCell.swift in Sources */,
+				D9AD014326E4316C001C339A /* mohhaPresenter.swift in Sources */,
 				D99F4B3026E0BED200885116 /* SceneDelegate.swift in Sources */,
 				D99F4B6A26E0C5EB00885116 /* ArticleViewController.swift in Sources */,
 				D99F4B6C26E0C5EB00885116 /* ArticleConfigurator.swift in Sources */,
 				D99F4B7226E0C76700885116 /* APIManager.swift in Sources */,
 				D99F4B5E26E0C5BF00885116 /* HomeConfigurator.swift in Sources */,
+				D9AD014626E4316C001C339A /* mohhaInteractor.swift in Sources */,
+				D9AD014526E4316C001C339A /* mohhaViewController.swift in Sources */,
+				D9AD014426E4316C001C339A /* mohhaRouter.swift in Sources */,
+				D9AD014726E4316C001C339A /* mohhaConfigurator.swift in Sources */,
 				D99F4B6926E0C5EB00885116 /* ArticleRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

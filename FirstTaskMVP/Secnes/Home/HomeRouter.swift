@@ -14,7 +14,6 @@ protocol HomeRouter {
 
 class HomeRouterImplementation: HomeRouter {
    
-    
     fileprivate weak var HomeViewController: HomeViewController?
     
     init(HomeViewController: HomeViewController) {
@@ -26,5 +25,4 @@ class HomeRouterImplementation: HomeRouter {
         vc.modalPresentationStyle = .fullScreen
         self.HomeViewController?.present(vc, animated: true, completion: nil)
     }
-    
 }

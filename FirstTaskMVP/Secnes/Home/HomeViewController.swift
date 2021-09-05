@@ -10,7 +10,6 @@ import UIKit
 final class HomeViewController: UIViewController {
     
     var configurator = HomeConfiguratorImplementation()
-    
     var presenter: HomePresenter?
     
     private let tableView: UITableView = {
@@ -43,28 +42,28 @@ final class HomeViewController: UIViewController {
     
 }
 
+// MARK: - UITableViewDelegate and DataSource
+
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return presenter?.aritcle?.count ?? 0
+        return presenter?.cellCount() ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: HomeTableViewCell.id, for: indexPath) as? HomeTableViewCell else { fatalError("Could not load \(HomeTableViewCell.self)")
         }
-        guard let model = presenter?.aritcle?[indexPath.row] else { fatalError("no Model") }
-        cell.configureCell(model: model)
+        presenter?.configure(cell: cell, forRow: indexPath.row)
         return cell
-    }
-    
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 110
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        guard let articel = presenter?.aritcle?[indexPath.row] else { return }
-        presenter?.goTo(article: articel)
+        presenter?.didSelectArticle(at: indexPath.row)
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 110
     }
 }
 
